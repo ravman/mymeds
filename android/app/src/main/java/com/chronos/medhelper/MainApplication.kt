@@ -1,4 +1,4 @@
-package com.mymedicationsrn
+package com.chronos.medhelper
 
 import android.app.Application
 import com.facebook.react.PackageList

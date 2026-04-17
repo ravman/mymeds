@@ -1,0 +1,148 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1024" height="500" viewBox="0 0 1024 500">
+  <defs>
+    <!-- Background gradient: primary-dark → primary -->
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%"   stop-color="#0D3D6E"/>
+      <stop offset="100%" stop-color="#1B5FA8"/>
+    </linearGradient>
+
+    <!-- Glow for accent ring -->
+    <filter id="glow" x="-40%" y="-40%" width="180%" height="180%">
+      <feGaussianBlur stdDeviation="10" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+
+    <!-- Soft drop shadow for cards -->
+    <filter id="cardShadow" x="-10%" y="-10%" width="120%" height="140%">
+      <feDropShadow dx="0" dy="6" stdDeviation="12" flood-color="#000" flood-opacity="0.25"/>
+    </filter>
+
+    <!-- Clip card corners -->
+    <clipPath id="card1clip"><rect x="0" y="0" width="280" height="72" rx="18"/></clipPath>
+    <clipPath id="card2clip"><rect x="0" y="0" width="280" height="72" rx="18"/></clipPath>
+    <clipPath id="card3clip"><rect x="0" y="0" width="280" height="72" rx="18"/></clipPath>
+  </defs>
+
+  <!-- ── Background ── -->
+  <rect width="1024" height="500" fill="url(#bgGrad)"/>
+
+  <!-- Subtle dot-grid texture overlay -->
+  <pattern id="dots" x="0" y="0" width="32" height="32" patternUnits="userSpaceOnUse">
+    <circle cx="16" cy="16" r="1.2" fill="#FFFFFF" opacity="0.06"/>
+  </pattern>
+  <rect width="1024" height="500" fill="url(#dots)"/>
+
+  <!-- Decorative large circle — bottom-right bleed -->
+  <circle cx="820" cy="380" r="320" fill="#1B5FA8" opacity="0.35"/>
+  <circle cx="820" cy="380" r="220" fill="#1B5FA8" opacity="0.3"/>
+
+  <!-- Accent arc (top-right) -->
+  <circle cx="950" cy="-30" r="180" fill="none" stroke="#E8841A" stroke-width="3" opacity="0.4"/>
+  <circle cx="950" cy="-30" r="230" fill="none" stroke="#E8841A" stroke-width="1.5" opacity="0.2"/>
+
+  <!-- ── LEFT: Branding block ── -->
+
+  <!-- Pill icon mark -->
+  <g transform="translate(72, 108)">
+    <!-- outer pill -->
+    <rect x="0" y="0" width="64" height="28" rx="14" fill="none" stroke="#E8841A" stroke-width="3"/>
+    <!-- divider -->
+    <line x1="32" y1="0" x2="32" y2="28" stroke="#E8841A" stroke-width="2.5"/>
+    <!-- right half fill -->
+    <clipPath id="pillClip"><rect x="32" y="0" width="32" height="28" rx="14"/></clipPath>
+    <rect x="32" y="0" width="32" height="28" rx="14" fill="#E8841A" opacity="0.35" clip-path="url(#pillClip)"/>
+  </g>
+
+  <!-- App name -->
+  <text x="72" y="200"
+        font-family="'Helvetica Neue', Arial, sans-serif"
+        font-size="82" font-weight="800" letter-spacing="-2"
+        fill="#FFFFFF">Med</text>
+  <text x="248" y="200"
+        font-family="'Helvetica Neue', Arial, sans-serif"
+        font-size="82" font-weight="800" letter-spacing="-2"
+        fill="#E8841A">Helper</text>
+
+  <!-- Tagline -->
+  <text x="74" y="244"
+        font-family="'Helvetica Neue', Arial, sans-serif"
+        font-size="22" font-weight="400" letter-spacing="0.5"
+        fill="#FFFFFF" opacity="0.82">Your daily medication companion</text>
+
+  <!-- Divider rule -->
+  <rect x="74" y="268" width="56" height="3" rx="2" fill="#E8841A"/>
+
+  <!-- Feature bullets -->
+  <g font-family="'Helvetica Neue', Arial, sans-serif" font-size="19" fill="#FFFFFF" opacity="0.90">
+    <!-- bullet dots -->
+    <circle cx="82" cy="304" r="5" fill="#E8841A"/>
+    <circle cx="82" cy="342" r="5" fill="#E8841A"/>
+    <circle cx="82" cy="380" r="5" fill="#E8841A"/>
+    <!-- labels -->
+    <text x="100" y="310">Smart reminders — never miss a dose</text>
+    <text x="100" y="348">Voice-friendly for easy entry</text>
+    <text x="100" y="386">Full dose history &amp; tracking</text>
+  </g>
+
+  <!-- ── RIGHT: Mock reminder cards ── -->
+  <g transform="translate(636, 80)">
+
+    <!-- Card 1 — upcoming dose -->
+    <g filter="url(#cardShadow)">
+      <rect width="300" height="76" rx="18" fill="#FFFFFF" opacity="0.97"/>
+    </g>
+    <!-- accent left bar -->
+    <rect x="0" y="0" width="6" height="76" rx="3" fill="#1E8C5A"/>
+    <!-- pill dot -->
+    <circle cx="38" cy="38" r="14" fill="#E4F5ED"/>
+    <text x="38" y="44" text-anchor="middle" font-size="16">💊</text>
+    <!-- text -->
+    <text x="62" y="29" font-family="'Helvetica Neue', Arial, sans-serif" font-size="15" font-weight="700" fill="#1A1714">Metformin 500 mg</text>
+    <text x="62" y="50" font-family="'Helvetica Neue', Arial, sans-serif" font-size="13" fill="#5C5650">8:00 AM · With breakfast</text>
+    <!-- taken badge -->
+    <rect x="216" y="22" width="68" height="26" rx="13" fill="#E4F5ED"/>
+    <text x="250" y="39" text-anchor="middle" font-family="'Helvetica Neue', Arial, sans-serif" font-size="12" font-weight="700" fill="#1E8C5A">✓ Taken</text>
+
+    <!-- Card 2 — due now -->
+    <g transform="translate(0, 100)" filter="url(#cardShadow)">
+      <rect width="300" height="76" rx="18" fill="#FFFFFF" opacity="0.97"/>
+    </g>
+    <g transform="translate(0, 100)">
+      <rect x="0" y="0" width="6" height="76" rx="3" fill="#E8841A"/>
+      <circle cx="38" cy="38" r="14" fill="#FDF1E0"/>
+      <text x="38" y="44" text-anchor="middle" font-size="16">💊</text>
+      <text x="62" y="29" font-family="'Helvetica Neue', Arial, sans-serif" font-size="15" font-weight="700" fill="#1A1714">Lisinopril 10 mg</text>
+      <text x="62" y="50" font-family="'Helvetica Neue', Arial, sans-serif" font-size="13" fill="#5C5650">12:00 PM · Due now</text>
+      <rect x="208" y="22" width="76" height="26" rx="13" fill="#E8841A"/>
+      <text x="246" y="39" text-anchor="middle" font-family="'Helvetica Neue', Arial, sans-serif" font-size="12" font-weight="700" fill="#FFFFFF">Take Now</text>
+    </g>
+
+    <!-- Card 3 — upcoming -->
+    <g transform="translate(0, 200)" filter="url(#cardShadow)">
+      <rect width="300" height="76" rx="18" fill="#FFFFFF" opacity="0.97"/>
+    </g>
+    <g transform="translate(0, 200)">
+      <rect x="0" y="0" width="6" height="76" rx="3" fill="#1B5FA8"/>
+      <circle cx="38" cy="38" r="14" fill="#E6EFF9"/>
+      <text x="38" y="44" text-anchor="middle" font-size="16">💊</text>
+      <text x="62" y="29" font-family="'Helvetica Neue', Arial, sans-serif" font-size="15" font-weight="700" fill="#1A1714">Atorvastatin 20 mg</text>
+      <text x="62" y="50" font-family="'Helvetica Neue', Arial, sans-serif" font-size="13" fill="#5C5650">8:00 PM · With dinner</text>
+      <rect x="208" y="22" width="76" height="26" rx="13" fill="#E6EFF9"/>
+      <text x="246" y="39" text-anchor="middle" font-family="'Helvetica Neue', Arial, sans-serif" font-size="12" font-weight="700" fill="#1B5FA8">Tonight</text>
+    </g>
+
+    <!-- Notification bell hint below cards -->
+    <g transform="translate(88, 308)">
+      <rect width="124" height="34" rx="17" fill="#FFFFFF" opacity="0.12"/>
+      <text x="62" y="23" text-anchor="middle"
+            font-family="'Helvetica Neue', Arial, sans-serif"
+            font-size="13" fill="#FFFFFF" opacity="0.85">🔔  Reminder sent</text>
+    </g>
+  </g>
+
+  <!-- ── Bottom tagline strip ── -->
+  <rect x="0" y="460" width="1024" height="40" fill="#0D3D6E" opacity="0.55"/>
+  <text x="512" y="486" text-anchor="middle"
+        font-family="'Helvetica Neue', Arial, sans-serif"
+        font-size="15" letter-spacing="2.5" fill="#FFFFFF" opacity="0.7">SIMPLE · RELIABLE · SENIOR-FRIENDLY</text>
+</svg>

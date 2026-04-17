@@ -1,4 +1,4 @@
-package com.mymedicationsrn
+package com.chronos.medhelper
 
 import android.os.Bundle
 import com.facebook.react.ReactActivity
@@ -12,7 +12,7 @@ class MainActivity : ReactActivity() {
     super.onCreate(savedInstanceState)
   }
 
-  override fun getMainComponentName(): String = "MyMedicationsRN"
+  override fun getMainComponentName(): String = "MedHelper"
 
   override fun createReactActivityDelegate(): ReactActivityDelegate =
       DefaultReactActivityDelegate(this, mainComponentName, fabricEnabled)

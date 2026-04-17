@@ -235,7 +235,7 @@ const tabLabelStyles = StyleSheet.create({
 
 const TAB_CONFIG: Record<string, { label: string; title: string; Icon: React.FC<{ color: string }> }> = {
   Today:       { label: 'Today',       title: "Today's Doses",  Icon: HomeIcon },
-  Medications: { label: 'Medications', title: 'My Medications', Icon: PillIcon },
+  Medications: { label: 'Medications', title: 'Medications',    Icon: PillIcon },
   History:     { label: 'History',     title: 'Dose History',   Icon: HistoryIcon },
   Settings:    { label: 'Settings',    title: 'Settings',       Icon: SettingsIcon },
 };

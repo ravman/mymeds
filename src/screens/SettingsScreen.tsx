@@ -190,7 +190,7 @@ export const SettingsScreen: React.FC = () => {
       {/* About */}
       <SectionLabel title="About" />
       <View style={styles.group}>
-        <SettingRow icon="💊" label="My Medications" detail="Version 1.0.0" last />
+        <SettingRow icon="💊" label="MedHelper" detail="Version 1.0.0" last />
       </View>
 
       <View style={styles.footer}>

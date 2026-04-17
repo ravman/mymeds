@@ -86,7 +86,7 @@ export async function requestMicPermission(): Promise<boolean> {
       PermissionsAndroid.PERMISSIONS.RECORD_AUDIO,
       {
         title: 'Microphone Permission',
-        message: 'My Medications needs the microphone to record medication names by voice.',
+        message: 'MedHelper needs the microphone to record medication names by voice.',
         buttonPositive: 'Allow',
       },
     );

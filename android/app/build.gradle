@@ -77,9 +77,9 @@ android {
     buildToolsVersion rootProject.ext.buildToolsVersion
     compileSdk rootProject.ext.compileSdkVersion
 
-    namespace "com.mymedicationsrn"
+    namespace "com.chronos.medhelper"
     defaultConfig {
-        applicationId "com.mymedicationsrn"
+        applicationId "com.chronos.medhelper"
         minSdkVersion rootProject.ext.minSdkVersion
         targetSdkVersion rootProject.ext.targetSdkVersion
         versionCode 1
